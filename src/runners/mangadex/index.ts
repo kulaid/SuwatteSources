@@ -3,7 +3,6 @@ import {
   MDBasicAuthProvider,
   MDContentSource,
   MDPageLinkResolver,
-  MDPageProvider,
   MDPreferenceProvider,
   MDLibraryEventHandler,
   MDContentSyncHandler,
@@ -15,7 +14,7 @@ import { languages } from "./utils";
 export const info: RunnerInfo = {
   name: "MangaDex",
   id: "org.mangadex",
-  version: 1.81,
+  version: 1.82,
   website: "https://mangadex.org",
   supportedLanguages: languages.map((v) =>
     v.languageCode.includes("-")
@@ -32,7 +31,6 @@ export const Target: ContentSource = {
   ...MDContentSource,
   ...MDDirectoryHandler,
   ...MDPageLinkResolver,
-  ...MDPageProvider,
   ...MDPreferenceProvider,
   ...MDBasicAuthProvider,
   ...MDLibraryEventHandler,
